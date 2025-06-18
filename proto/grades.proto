@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package grades;
+
+service GradeService {
+  rpc GetGradesAverage (Empty) returns (GradeAverageResponse);
+}
+
+message Empty {}
+
+message GradeAverageResponse {
+  double average = 1;
+}
